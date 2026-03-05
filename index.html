@@ -1716,7 +1716,19 @@ ctx.shadowColor=‘rgba(240,224,64,0.4)’; ctx.shadowBlur=s*0.08;
 ctx.fillText(‘LB’,s*0.5,s*0.38); ctx.shadowBlur=0;
 ctx.fillStyle=’#ff4d6d’;
 const bw=s*0.36,bh=s*0.045,bx=s*0.5-bw/2,by=s*0.56;
-ctx.beginPath(); ctx.roundRect(bx,by,bw,bh,bh/2); ctx.fill();
+// Polyfill roundRect — use manual path for iOS < 16 compatibility
+ctx.beginPath();
+const rx = bh/2;
+ctx.moveTo(bx+rx, by);
+ctx.lineTo(bx+bw-rx, by);
+ctx.quadraticCurveTo(bx+bw, by, bx+bw, by+rx);
+ctx.lineTo(bx+bw, by+bh-rx);
+ctx.quadraticCurveTo(bx+bw, by+bh, bx+bw-rx, by+bh);
+ctx.lineTo(bx+rx, by+bh);
+ctx.quadraticCurveTo(bx, by+bh, bx, by+bh-rx);
+ctx.lineTo(bx, by+rx);
+ctx.quadraticCurveTo(bx, by, bx+rx, by);
+ctx.closePath(); ctx.fill();
 return cv.toDataURL(‘image/png’);
 }
 
@@ -1761,7 +1773,7 @@ setTimeout(() => { if (hint.parentNode) hint.remove(); }, 6000);
 }
 
 // ── INIT ───────────────────────────────────────────────────────
-setupPWA();
+try { setupPWA(); } catch(e) { console.warn(‘PWA setup failed:’, e); }
 initDemo();
 </script>
 

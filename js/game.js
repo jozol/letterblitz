@@ -1,64 +1,64 @@
 // ── WORD BANK ──────────────────────────────────────────────────
 const WORDS = [
-  { w: "cat",         p: "/kæt/",           d: "A small domesticated carnivorous mammal." },
-  { w: "dog",         p: "/dɒɡ/",           d: "A domesticated carnivore kept as a pet or working animal." },
-  { w: "sun",         p: "/sʌn/",           d: "The star at the centre of the solar system." },
-  { w: "moon",        p: "/muːn/",          d: "The natural satellite of the Earth." },
-  { w: "fire",        p: "/faɪər/",         d: "Combustion producing heat and light." },
-  { w: "tree",        p: "/triː/",          d: "A tall perennial plant with a trunk and branches." },
-  { w: "book",        p: "/bʊk/",           d: "A written or printed work on pages bound together." },
-  { w: "rain",        p: "/reɪn/",          d: "Water falling from clouds in drops." },
-  { w: "wind",        p: "/wɪnd/",          d: "The natural movement of air." },
-  { w: "star",        p: "/stɑːr/",         d: "A luminous point visible in the night sky." },
-  { w: "apple",       p: "/ˈæp.əl/",        d: "A round fruit, typically red or green." },
-  { w: "chair",       p: "/tʃeər/",         d: "A separate seat for one person." },
-  { w: "house",       p: "/haʊs/",          d: "A building for human habitation." },
-  { w: "light",       p: "/laɪt/",          d: "Electromagnetic radiation visible to the human eye." },
-  { w: "heart",       p: "/hɑːrt/",         d: "A hollow muscular organ that pumps blood." },
-  { w: "blood",       p: "/blʌd/",          d: "Red liquid circulating in the bodies of animals." },
-  { w: "storm",       p: "/stɔːrm/",        d: "A violent disturbance of the atmosphere." },
-  { w: "clock",       p: "/klɒk/",          d: "An instrument for measuring time." },
-  { w: "bread",       p: "/bred/",          d: "Food made from flour, water, and yeast." },
-  { w: "dream",       p: "/driːm/",         d: "Thoughts and images occurring during sleep." },
-  { w: "orange",      p: "/ˈɒr.ɪndʒ/",     d: "A round citrus fruit with a reddish-yellow rind." },
-  { w: "mirror",      p: "/ˈmɪr.ər/",       d: "A surface that reflects a clear image." },
-  { w: "bridge",      p: "/brɪdʒ/",         d: "A structure carrying a road across a gap." },
-  { w: "frozen",      p: "/ˈfrəʊ.zən/",     d: "Having been turned into ice." },
-  { w: "silver",      p: "/ˈsɪl.vər/",      d: "A precious white-grey metallic element." },
-  { w: "window",      p: "/ˈwɪn.dəʊ/",      d: "An opening in a wall to admit light and air." },
-  { w: "candle",      p: "/ˈkæn.dəl/",      d: "A cylinder of wax with a wick that provides light." },
-  { w: "bottle",      p: "/ˈbɒt.əl/",       d: "A container with a narrow neck for liquid." },
-  { w: "castle",      p: "/ˈkɑː.səl/",      d: "A large medieval fortified building." },
-  { w: "feather",     p: "/ˈfeð.ər/",       d: "A flat appendage growing from a bird's skin." },
-  { w: "blanket",     p: "/ˈblæŋ.kɪt/",     d: "A large piece of woollen cloth used as a covering." },
-  { w: "cabinet",     p: "/ˈkæb.ɪ.nɪt/",   d: "A piece of furniture with drawers or shelves." },
-  { w: "whisper",     p: "/ˈwɪs.pər/",      d: "Speaking very softly using one's breath." },
-  { w: "thunder",     p: "/ˈθʌn.dər/",      d: "A loud rumbling sound heard after lightning." },
-  { w: "lantern",     p: "/ˈlæn.tərn/",     d: "A lamp with a transparent case protecting the flame." },
-  { w: "compass",     p: "/ˈkʌm.pəs/",      d: "An instrument for determining direction." },
-  { w: "dolphin",     p: "/ˈdɒl.fɪn/",      d: "An aquatic mammal with a distinctive curved fin." },
-  { w: "pilgrim",     p: "/ˈpɪl.ɡrɪm/",     d: "A person who journeys to a sacred place." },
-  { w: "harvest",     p: "/ˈhɑː.vɪst/",     d: "The process of gathering crops." },
-  { w: "phantom",     p: "/ˈfæn.təm/",      d: "A ghost or apparition." },
-  { w: "absolute",    p: "/ˈæb.sə.luːt/",   d: "Complete, total, without exception." },
-  { w: "spectrum",    p: "/ˈspek.trəm/",    d: "A band of colours as seen in a rainbow." },
-  { w: "sequence",    p: "/ˈsiː.kwəns/",    d: "A series of events in a particular order." },
-  { w: "fragment",    p: "/ˈfræɡ.mənt/",    d: "A small part broken off from something." },
-  { w: "boundary",    p: "/ˈbaʊn.dri/",     d: "A line marking the limits of an area." },
-  { w: "skeleton",    p: "/ˈskel.ɪ.tən/",   d: "The internal framework of bones in a body." },
-  { w: "labyrinth",   p: "/ˈlæb.ə.rɪnθ/",  d: "A complicated, irregular network of passages." },
-  { w: "mechanism",   p: "/ˈmek.ə.nɪ.zəm/",d: "A system of parts working together in a machine." },
-  { w: "symphony",    p: "/ˈsɪm.fə.ni/",    d: "An elaborate musical composition for full orchestra." },
-  { w: "eloquence",   p: "/ˈel.ə.kwəns/",   d: "Fluent and persuasive speech or writing." },
+  { w: "cat", p: "/kæt/", d: "A small domesticated carnivorous mammal." },
+  { w: "dog", p: "/dɒɡ/", d: "A domesticated carnivore kept as a pet or working animal." },
+  { w: "sun", p: "/sʌn/", d: "The star at the centre of the solar system." },
+  { w: "moon", p: "/muːn/", d: "The natural satellite of the Earth." },
+  { w: "fire", p: "/faɪər/", d: "Combustion producing heat and light." },
+  { w: "tree", p: "/triː/", d: "A tall perennial plant with a trunk and branches." },
+  { w: "book", p: "/bʊk/", d: "A written or printed work on pages bound together." },
+  { w: "rain", p: "/reɪn/", d: "Water falling from clouds in drops." },
+  { w: "wind", p: "/wɪnd/", d: "The natural movement of air." },
+  { w: "star", p: "/stɑːr/", d: "A luminous point visible in the night sky." },
+  { w: "apple", p: "/ˈæp.əl/", d: "A round fruit, typically red or green." },
+  { w: "chair", p: "/tʃeər/", d: "A separate seat for one person." },
+  { w: "house", p: "/haʊs/", d: "A building for human habitation." },
+  { w: "light", p: "/laɪt/", d: "Electromagnetic radiation visible to the human eye." },
+  { w: "heart", p: "/hɑːrt/", d: "A hollow muscular organ that pumps blood." },
+  { w: "blood", p: "/blʌd/", d: "Red liquid circulating in the bodies of animals." },
+  { w: "storm", p: "/stɔːrm/", d: "A violent disturbance of the atmosphere." },
+  { w: "clock", p: "/klɒk/", d: "An instrument for measuring time." },
+  { w: "bread", p: "/bred/", d: "Food made from flour, water, and yeast." },
+  { w: "dream", p: "/driːm/", d: "Thoughts and images occurring during sleep." },
+  { w: "orange", p: "/ˈɒr.ɪndʒ/", d: "A round citrus fruit with a reddish-yellow rind." },
+  { w: "mirror", p: "/ˈmɪr.ər/", d: "A surface that reflects a clear image." },
+  { w: "bridge", p: "/brɪdʒ/", d: "A structure carrying a road across a gap." },
+  { w: "frozen", p: "/ˈfrəʊ.zən/", d: "Having been turned into ice." },
+  { w: "silver", p: "/ˈsɪl.vər/", d: "A precious white-grey metallic element." },
+  { w: "window", p: "/ˈwɪn.dəʊ/", d: "An opening in a wall to admit light and air." },
+  { w: "candle", p: "/ˈkæn.dəl/", d: "A cylinder of wax with a wick that provides light." },
+  { w: "bottle", p: "/ˈbɒt.əl/", d: "A container with a narrow neck for liquid." },
+  { w: "castle", p: "/ˈkɑː.səl/", d: "A large medieval fortified building." },
+  { w: "feather", p: "/ˈfeð.ər/", d: "A flat appendage growing from a bird's skin." },
+  { w: "blanket", p: "/ˈblæŋ.kɪt/", d: "A large piece of woollen cloth used as a covering." },
+  { w: "cabinet", p: "/ˈkæb.ɪ.nɪt/", d: "A piece of furniture with drawers or shelves." },
+  { w: "whisper", p: "/ˈwɪs.pər/", d: "Speaking very softly using one's breath." },
+  { w: "thunder", p: "/ˈθʌn.dər/", d: "A loud rumbling sound heard after lightning." },
+  { w: "lantern", p: "/ˈlæn.tərn/", d: "A lamp with a transparent case protecting the flame." },
+  { w: "compass", p: "/ˈkʌm.pəs/", d: "An instrument for determining direction." },
+  { w: "dolphin", p: "/ˈdɒl.fɪn/", d: "An aquatic mammal with a distinctive curved fin." },
+  { w: "pilgrim", p: "/ˈpɪl.ɡrɪm/", d: "A person who journeys to a sacred place." },
+  { w: "harvest", p: "/ˈhɑː.vɪst/", d: "The process of gathering crops." },
+  { w: "phantom", p: "/ˈfæn.təm/", d: "A ghost or apparition." },
+  { w: "absolute", p: "/ˈæb.sə.luːt/", d: "Complete, total, without exception." },
+  { w: "spectrum", p: "/ˈspek.trəm/", d: "A band of colours as seen in a rainbow." },
+  { w: "sequence", p: "/ˈsiː.kwəns/", d: "A series of events in a particular order." },
+  { w: "fragment", p: "/ˈfræɡ.mənt/", d: "A small part broken off from something." },
+  { w: "boundary", p: "/ˈbaʊn.dri/", d: "A line marking the limits of an area." },
+  { w: "skeleton", p: "/ˈskel.ɪ.tən/", d: "The internal framework of bones in a body." },
+  { w: "labyrinth", p: "/ˈlæb.ə.rɪnθ/", d: "A complicated, irregular network of passages." },
+  { w: "mechanism", p: "/ˈmek.ə.nɪ.zəm/", d: "A system of parts working together in a machine." },
+  { w: "symphony", p: "/ˈsɪm.fə.ni/", d: "An elaborate musical composition for full orchestra." },
+  { w: "eloquence", p: "/ˈel.ə.kwəns/", d: "Fluent and persuasive speech or writing." },
   { w: "crystallize", p: "/ˈkrɪs.tə.laɪz/", d: "To form or cause to form crystals." },
-  { w: "wilderness",  p: "/ˈwɪl.də.nəs/",   d: "An uncultivated, uninhabited region." },
-  { w: "government",  p: "/ˈɡʌv.ən.mənt/",  d: "The governing body of a state." },
+  { w: "wilderness", p: "/ˈwɪl.də.nəs/", d: "An uncultivated, uninhabited region." },
+  { w: "government", p: "/ˈɡʌv.ən.mənt/", d: "The governing body of a state." },
 ];
 
 // ── PHASES ──────────────────────────────────────────────────────
 const PHASES = [
-  { from: 0,  label: null,      emoji: null, wrongGapMin: 3, wrongGapMax: 5, timerMs: 4000 },
-  { from: 6,  label: 'ROUND 2', emoji: '⚡', wrongGapMin: 2, wrongGapMax: 4, timerMs: 3000 },
+  { from: 0, label: null, emoji: null, wrongGapMin: 3, wrongGapMax: 5, timerMs: 4000 },
+  { from: 6, label: 'ROUND 2', emoji: '⚡', wrongGapMin: 2, wrongGapMax: 4, timerMs: 3000 },
   { from: 16, label: 'ROUND 3', emoji: '🔥', wrongGapMin: 1, wrongGapMax: 3, timerMs: 2200 },
   { from: 30, label: 'ROUND 4', emoji: '💀', wrongGapMin: 1, wrongGapMax: 2, timerMs: 1600 },
 ];
@@ -85,7 +85,7 @@ function playTone(freq, type, startT, dur, gainVal, endFreq) {
   if (muted) return;
   const ctx = getAudioCtx();
   const osc = ctx.createOscillator();
-  const g   = ctx.createGain();
+  const g = ctx.createGain();
   osc.connect(g); g.connect(ctx.destination);
   osc.type = type; osc.frequency.setValueAtTime(freq, startT);
   if (endFreq) osc.frequency.exponentialRampToValueAtTime(endFreq, startT + dur);
@@ -132,7 +132,7 @@ function sfxExplosion() {
 }
 function sfxMilestone() {
   const ctx = getAudioCtx(); const t = ctx.currentTime;
-  [[523,0],[659,0.12],[784,0.24]].forEach(([f,dt]) => playTone(f,'sine',t+dt,0.18,0.35));
+  [[523, 0], [659, 0.12], [784, 0.24]].forEach(([f, dt]) => playTone(f, 'sine', t + dt, 0.18, 0.35));
 }
 function sfxTick() {
   const ctx = getAudioCtx(); const t = ctx.currentTime;
@@ -140,24 +140,24 @@ function sfxTick() {
 }
 function sfxPhaseUp() {
   const ctx = getAudioCtx(); const t = ctx.currentTime;
-  [[400,0],[600,0.1],[900,0.22]].forEach(([f,dt]) => playTone(f,'sawtooth',t+dt,0.12,0.3));
+  [[400, 0], [600, 0.1], [900, 0.22]].forEach(([f, dt]) => playTone(f, 'sawtooth', t + dt, 0.12, 0.3));
 }
 
 async function loadBgMusic() {
   if (bgmLoaded) return;
   try {
     const ctx = getAudioCtx();
-    const res = await fetch('assets/bgm.mp3');
+    const res = await fetch('./assets/bgm.mp3');
     const arr = await res.arrayBuffer();
     bgmBuffer = await ctx.decodeAudioData(arr);
     bgmLoaded = true;
-  } catch(e) { console.warn('BGM load failed', e); }
+  } catch (e) { console.warn('BGM load failed', e); }
 }
 
 function startBgMusic() {
   loadBgMusic().then(() => {
     if (!bgmBuffer) return;
-    if (bgmSource) { try { bgmSource.stop(); } catch(e){} }
+    if (bgmSource) { try { bgmSource.stop(); } catch (e) { } }
     const ctx = getAudioCtx();
     bgmGain = ctx.createGain();
     bgmGain.gain.value = muted ? 0 : 0.4;
@@ -176,7 +176,7 @@ function stopBgMusic(fadeDuration) {
   const t = ctx.currentTime;
   bgmGain.gain.setValueAtTime(bgmGain.gain.value, t);
   bgmGain.gain.linearRampToValueAtTime(0, t + fadeDuration / 1000);
-  setTimeout(() => { try { bgmSource.stop(); bgmSource = null; } catch(e){} }, fadeDuration);
+  setTimeout(() => { try { bgmSource.stop(); bgmSource = null; } catch (e) { } }, fadeDuration);
 }
 
 // ── DOM CACHE ─────────────────────────────────────────────────
@@ -185,22 +185,22 @@ const $ = id => document.getElementById(id);
 const DOM = {};
 function cacheDOM() {
   [
-    'start-screen','game-screen','gameover-screen',
-    'score-display','streak-display','multiplier-badge',
-    'timer-fill','word-card','word-display','word-pos',
-    'btn-a','btn-b','focus-card','go-score','go-best-streak',
-    'go-new-best','go-word','go-picked','go-correct','go-defn',
-    'go-pron','go-speak-btn','go-collection','go-share-btn',
-    'go-message','reason-block','reason-picked','reason-correct',
-    'play-btn','daily-btn','daily-status','mute-btn',
-    'loading-overlay','demo-word','demo-letters','demo-hint',
-    'demo-btn-a','demo-btn-b','demo-caption'
+    'start-screen', 'game-screen', 'gameover-screen',
+    'score-display', 'streak-display', 'multiplier-badge',
+    'timer-fill', 'word-card', 'word-display', 'word-pos',
+    'btn-a', 'btn-b', 'focus-card', 'go-score', 'go-best-streak',
+    'go-new-best', 'go-word', 'go-picked', 'go-correct', 'go-defn',
+    'go-pron', 'go-speak-btn', 'go-collection', 'go-share-btn',
+    'go-message', 'reason-block', 'reason-picked', 'reason-correct',
+    'play-btn', 'daily-btn', 'daily-status', 'mute-btn',
+    'loading-overlay', 'demo-word', 'demo-letters', 'demo-hint',
+    'demo-btn-a', 'demo-btn-b', 'demo-caption'
   ].forEach(id => DOM[id] = document.getElementById(id));
 }
 
 // ── STATE ──────────────────────────────────────────────────────
 let score = 0, streak = 0, bestStreak = 0;
-let currentWord = null, correctIndex = 0, options = [0,0];
+let currentWord = null, correctIndex = 0, options = [0, 0];
 let timerRAF = null, timerStart = 0, timerDuration = 4000;
 let gameRunning = false, lastPressureState = null;
 let correctWords = [], wrongWord = null, pickedWrongNum = null;
@@ -223,11 +223,11 @@ function getDailyResult() {
   catch { return null; }
 }
 function saveDailyResult(s, st, words) {
-  try { localStorage.setItem(getDailyKey(), JSON.stringify({ score: s, streak: st, words: words.map(w=>w.w), day: getDayNumber() })); }
-  catch {}
+  try { localStorage.setItem(getDailyKey(), JSON.stringify({ score: s, streak: st, words: words.map(w => w.w), day: getDayNumber() })); }
+  catch { }
 }
 function mulberry32(seed) {
-  return function() {
+  return function () {
     seed |= 0; seed = seed + 0x6D2B79F5 | 0;
     let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
     t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
@@ -276,7 +276,7 @@ function startDaily() {
 // ── WORD FETCHING ──────────────────────────────────────────────
 async function fetchFreshWords() {
   try {
-    const wordRes = await fetch('https://random-word-api.vercel.app/api?words=50');
+    const wordRes = await fetch('https://random-word-api.herokuapp.com/word?number=50');
     if (!wordRes.ok) throw new Error('word fetch failed');
     const rawWords = await wordRes.json();
     const filtered = rawWords.filter(w =>
@@ -306,14 +306,14 @@ async function enrichWord(word) {
     const def = meaning?.definitions?.[0]?.definition || '';
     if (!def) return null;
     const clean = def.charAt(0).toUpperCase() + def.slice(1);
-    const short = clean.length > 90 ? clean.slice(0,87) + '…' : clean;
+    const short = clean.length > 90 ? clean.slice(0, 87) + '…' : clean;
     return { w: word, p: phonetic || '/' + word + '/', d: short };
   } catch { return null; }
 }
 
 // ── HELPERS ────────────────────────────────────────────────────
 function getRandom(arr, exclude = []) {
-  const avail = arr.map((_,i) => i).filter(i => !exclude.includes(i));
+  const avail = arr.map((_, i) => i).filter(i => !exclude.includes(i));
   if (!avail.length) return null;
   return avail[Math.floor(Math.random() * avail.length)];
 }
@@ -332,14 +332,14 @@ function getWrongCount(correct, rnd) {
 
 function getMultiplier(wordLen) {
   if (wordLen >= 10) return 4;
-  if (wordLen >= 8)  return 3;
-  if (wordLen >= 6)  return 2;
+  if (wordLen >= 8) return 3;
+  if (wordLen >= 6) return 2;
   return 1;
 }
 
 // ── HIGH SCORE ─────────────────────────────────────────────────
 function getHighScore() { try { return parseInt(localStorage.getItem('lb_highscore') || '0', 10); } catch { return 0; } }
-function setHighScore(s) { try { localStorage.setItem('lb_highscore', s); } catch {} }
+function setHighScore(s) { try { localStorage.setItem('lb_highscore', s); } catch { } }
 
 // ── GAME FLOW ──────────────────────────────────────────────────
 function showScreen(id) {
@@ -366,7 +366,7 @@ function startGame() {
   DOM['streak-display'].textContent = '0';
   DOM['multiplier-badge'].textContent = '×1';
   const card = DOM['word-card'];
-  if (card) card.classList.remove('pressure-low','pressure-critical');
+  if (card) card.classList.remove('pressure-low', 'pressure-critical');
   showScreen('game-screen');
 
   const overlay = DOM['loading-overlay'];
@@ -390,7 +390,7 @@ function nextWord() {
   if (milestoneActive) return;
   lastPressureState = null;
   const card = DOM['word-card'];
-  if (card) card.classList.remove('pressure-low','pressure-critical');
+  if (card) card.classList.remove('pressure-low', 'pressure-critical');
 
   const wordEl = document.getElementById('current-word');
   wordEl.classList.add('flash');
@@ -418,7 +418,7 @@ function nextWord() {
   DOM['score-display'].textContent = score;
   DOM['btn-a'].textContent = options[0];
   DOM['btn-b'].textContent = options[1];
-  ['btn-a','btn-b'].forEach(id => {
+  ['btn-a', 'btn-b'].forEach(id => {
     const b = document.getElementById(id);
     b.className = 'ans-btn'; b.disabled = false; b.style.pointerEvents = '';
   });
@@ -428,7 +428,7 @@ function nextWord() {
 
   // Check phase transition
   const prevPhase = getPhase(Math.max(0, roundNum - 1));
-  const newPhase  = getPhase(roundNum);
+  const newPhase = getPhase(roundNum);
   if (roundNum > 0 && newPhase.from !== prevPhase.from && newPhase.label) {
     sfxPhaseUp();
     pendingMilestone = { label: newPhase.label, emoji: newPhase.emoji, sub: 'Harder words. Less time. Stay sharp.' };
@@ -457,9 +457,9 @@ function updateStreakUI() {
   el.textContent = streak;
   el.classList.remove('active', 'hot', 'pop');
   void el.offsetWidth;
-  if (streak >= 10)     el.classList.add('hot', 'pop');
+  if (streak >= 10) el.classList.add('hot', 'pop');
   else if (streak >= 3) el.classList.add('active', 'pop');
-  else el.classList.remove('active','hot');
+  else el.classList.remove('active', 'hot');
 }
 
 // ── POINTS BURST ────────────────────────────────────────────────
@@ -469,7 +469,7 @@ function spawnPointsBurst(pts, anchorEl) {
   burst.className = 'pts-burst';
   burst.textContent = pts > 1 ? '+' + pts + ' ×' + getMultiplier(currentWord.w.length) : '+' + pts;
   burst.style.left = (rect.left + rect.width / 2 - 30) + 'px';
-  burst.style.top  = (rect.top - 10) + 'px';
+  burst.style.top = (rect.top - 10) + 'px';
   document.body.appendChild(burst);
   setTimeout(() => burst.remove(), 800);
 }
@@ -483,6 +483,7 @@ function flashAsteroidsWrong() {
 function choose(btnIdx) {
   if (!gameRunning) return;
   cancelAnimationFrame(timerRAF);
+  timerStart = 0; // pause the timer — startGameLoop() will restart it fresh
   const btnA = DOM['btn-a'];
   const btnB = DOM['btn-b'];
   const btns = [btnA, btnB];
@@ -546,14 +547,14 @@ function resizeAsteroidCanvas() {
   const H = card ? (card.getBoundingClientRect().height || card.offsetHeight || 160) : 160;
   if (W === 0 || H === 0) return;
   const dpr = window.devicePixelRatio || 1;
-  asteroidCanvas.width  = W * dpr;
+  asteroidCanvas.width = W * dpr;
   asteroidCanvas.height = H * dpr;
-  if (actx) { actx.setTransform(dpr,0,0,dpr,0,0); }
+  if (actx) { actx.setTransform(dpr, 0, 0, dpr, 0, 0); }
 }
 
 function getCanvasSize() {
   const dpr = window.devicePixelRatio || 1;
-  return { W: asteroidCanvas.width/dpr, H: asteroidCanvas.height/dpr, dpr };
+  return { W: asteroidCanvas.width / dpr, H: asteroidCanvas.height / dpr, dpr };
 }
 
 function makeAsteroidShape(r, seed) {
@@ -561,8 +562,8 @@ function makeAsteroidShape(r, seed) {
   const shape = [];
   for (let i = 0; i < pts; i++) {
     const angle = (i / pts) * Math.PI * 2;
-    const jitter = r * (0.75 + 0.25 * Math.sin(seed * (i+1) * 2.3));
-    shape.push({ a: angle, r: jitter });
+    const jitter = r * (0.75 + 0.25 * Math.sin(seed * (i + 1) * 2.3));
+    shape.push({ x: Math.cos(angle) * jitter, y: Math.sin(angle) * jitter });
   }
   return shape;
 }
@@ -575,13 +576,13 @@ function spawnAsteroids(count) {
   if (W === 0) return;
   const r = Math.min(W / (count * 2.4), H * 0.18, 18);
   for (let i = 0; i < count; i++) {
-    const seed  = Math.random() * 100;
+    const seed = Math.random() * 100;
     const angle = Math.random() * Math.PI * 2;
     const speed = 0.5 + Math.random() * 0.8;
     asteroids.push({
-      id: i, x: r + Math.random()*(W-r*2), y: r + Math.random()*(H-r*2), r,
-      vx: Math.cos(angle)*speed, vy: Math.sin(angle)*speed,
-      rot: Math.random()*Math.PI*2, rotSpeed: (Math.random()-0.5)*0.014,
+      id: i, x: r + Math.random() * (W - r * 2), y: r + Math.random() * (H - r * 2), r,
+      vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
+      rot: Math.random() * Math.PI * 2, rotSpeed: (Math.random() - 0.5) * 0.014,
       shape: makeAsteroidShape(r, seed), alpha: 1, seed, state: 'floating', flashTimer: 0,
     });
   }
@@ -606,14 +607,15 @@ function startAsteroidLoop() {
 function startGameLoop() {
   cancelAnimationFrame(asteroidRAF);
   cancelAnimationFrame(timerRAF);
-  const fill  = DOM['timer-fill'];
-  const card  = DOM['word-card'];
+  timerStart = performance.now();
+  const fill = DOM['timer-fill'];
+  const card = DOM['word-card'];
 
   function loop(now) {
     // ── Timer tick ──────────────────────────────────────────
     if (gameRunning && timerStart > 0) {
       const elapsed = now - timerStart;
-      const ratio   = Math.max(0, 1 - elapsed / timerDuration);
+      const ratio = Math.max(0, 1 - elapsed / timerDuration);
       fill.style.transform = 'scaleX(' + ratio + ')';
 
       if (ratio < 0.2) {
@@ -661,14 +663,14 @@ function drawAsteroids() {
   actx.clearRect(0, 0, W, H);
 
   // ── Draw asteroids (batched by state to reduce GPU state changes) ──
-  const normal   = asteroids.filter(a => a.state !== 'dead' && a.flashTimer <= 0);
+  const normal = asteroids.filter(a => a.state !== 'dead' && a.flashTimer <= 0);
   const flashing = asteroids.filter(a => a.state !== 'dead' && a.flashTimer > 0);
 
   function drawRock(a, isFlashing) {
-    a.x  += a.vx;  a.y  += a.vy;  a.rot += a.rotSpeed;
-    if (a.x < a.r)     { a.x = a.r;     a.vx *= -1; }
+    a.x += a.vx; a.y += a.vy; a.rot += a.rotSpeed;
+    if (a.x < a.r) { a.x = a.r; a.vx *= -1; }
     if (a.x > W - a.r) { a.x = W - a.r; a.vx *= -1; }
-    if (a.y < a.r)     { a.y = a.r;     a.vy *= -1; }
+    if (a.y < a.r) { a.y = a.r; a.vy *= -1; }
     if (a.y > H - a.r) { a.y = H - a.r; a.vy *= -1; }
     if (a.flashTimer > 0) a.flashTimer--;
 
@@ -679,10 +681,10 @@ function drawAsteroids() {
     actx.beginPath();
     a.shape.forEach((p, i) => i === 0 ? actx.moveTo(p.x, p.y) : actx.lineTo(p.x, p.y));
     actx.closePath();
-    actx.fillStyle   = isFlashing ? 'rgba(200,60,80,0.95)' : 'rgba(60,55,80,0.95)';
+    actx.fillStyle = isFlashing ? 'rgba(200,60,80,0.95)' : 'rgba(60,55,80,0.95)';
     actx.fill();
     actx.strokeStyle = isFlashing ? '#ff8090' : '#b0a0e0';
-    actx.lineWidth   = 1.8;
+    actx.lineWidth = 1.8;
     actx.stroke();
     actx.restore();
   }
@@ -690,17 +692,17 @@ function drawAsteroids() {
   // Batch 1: normal asteroids — one shadowBlur set for the whole batch
   if (normal.length > 0) {
     actx.shadowColor = '#f0e040';
-    actx.shadowBlur  = 8;
+    actx.shadowBlur = 8;
     normal.forEach(a => drawRock(a, false));
-    actx.shadowBlur  = 0; // reset once after batch
+    actx.shadowBlur = 0; // reset once after batch
   }
 
   // Batch 2: flashing asteroids
   if (flashing.length > 0) {
     actx.shadowColor = '#ff4d6d';
-    actx.shadowBlur  = 12;
+    actx.shadowBlur = 12;
     flashing.forEach(a => drawRock(a, true));
-    actx.shadowBlur  = 0;
+    actx.shadowBlur = 0;
   }
 
   // ── Draw lasers ─────────────────────────────────────────────
@@ -795,14 +797,14 @@ function drawAsteroids() {
 
 function spawnExplosion(x, y, r) {
   sfxExplosion();
-  const colors = ['#f0e040','#ff9500','#ff4d6d','#40e0b4','#ffffff'];
-  const particles = Array.from({length: 12}, () => {
-    const angle = Math.random()*Math.PI*2;
-    const speed = 1 + Math.random()*2;
+  const colors = ['#f0e040', '#ff9500', '#ff4d6d', '#40e0b4', '#ffffff'];
+  const particles = Array.from({ length: 12 }, () => {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 1 + Math.random() * 2;
     return {
-      x, y, vx: Math.cos(angle)*speed, vy: Math.sin(angle)*speed,
-      r: 1.5 + Math.random()*2, alpha: 1, fade: 0.04 + Math.random()*0.03,
-      color: colors[Math.floor(Math.random()*colors.length)],
+      x, y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
+      r: 1.5 + Math.random() * 2, life: 1, decay: 0.04 + Math.random() * 0.03,
+      color: colors[Math.floor(Math.random() * colors.length)],
     };
   });
   explosions.push({ particles });
@@ -811,7 +813,7 @@ function spawnExplosion(x, y, r) {
 function fireLasers() {
   if (!asteroidCanvas) return;
   const { W, H } = getCanvasSize();
-  const ox = W/2, oy = H;
+  const ox = W / 2, oy = H;
   const born = performance.now();
   asteroids.forEach(a => {
     if (a.state !== 'floating') return;
@@ -825,6 +827,7 @@ function showMilestone(cb) {
   if (!pendingMilestone) { cb(); return; }
   milestoneActive = true;
   cancelAnimationFrame(timerRAF);
+  timerStart = 0; // pause timer during milestone
   const m = pendingMilestone; pendingMilestone = null;
   const overlay = document.createElement('div');
   sfxMilestone();
@@ -845,7 +848,7 @@ function showMilestone(cb) {
 function flashGameOver(isTimeout, cb) {
   stopBgMusic(500);
   const card = DOM['word-card'];
-  if (card) card.classList.remove('pressure-low','pressure-critical');
+  if (card) card.classList.remove('pressure-low', 'pressure-critical');
   clearAsteroids();
   const flash = document.createElement('div');
   flash.className = 'gameover-flash' + (isTimeout ? ' timeout' : '');
@@ -898,7 +901,7 @@ function triggerGameOver(timeout) {
       showFocusCard(wrongWord, false, pickedWrongNum);
       buildCollection();
       showScreen('gameover-screen');
-    } catch(err) {
+    } catch (err) {
       console.error('Game over screen error:', err.message, err.stack);
       showScreen('gameover-screen');
     }
@@ -912,8 +915,8 @@ function getGoMessage(s, isNewBest) {
   }
   if (s === 0) return "Didn't even see it coming, huh? 👀 First one's always free.";
   if (s === 1) return 'One word down. The journey of a thousand begins… 🐢';
-  if (s <= 3)  return 'So close! The letters are trickier than they look. One more go. 💪';
-  if (s <= 7)  return 'Getting warmer! Can you beat <em>' + s + '</em> next round?';
+  if (s <= 3) return 'So close! The letters are trickier than they look. One more go. 💪';
+  if (s <= 7) return 'Getting warmer! Can you beat <em>' + s + '</em> next round?';
   if (s <= 15) return '🔥 Solid run. You\'re starting to feel the rhythm — don\'t stop now.';
   if (s <= 24) return 'That was impressive. Phase 4 is waiting for you. 👀';
   return '💥 <em>Legendary.</em> Seriously — can you even do that again?';
@@ -982,10 +985,10 @@ function speakWord() {
 
 // ── SHARE ──────────────────────────────────────────────────────
 const ENGAGEMENT_PHRASES = [
-  { max: 5,   phrase: "Just getting warmed up... \uD83E\uDDAB Can you do better?" },
-  { max: 15,  phrase: "Not bad! Think you can outlast me? \uD83D\uDC40" },
-  { max: 30,  phrase: "Decent run! Let's see if you've got the words for it \uD83D\uDCDA" },
-  { max: 50,  phrase: "Solid score! Dare you to beat it \uD83D\uDD25" },
+  { max: 5, phrase: "Just getting warmed up... \uD83E\uDDAB Can you do better?" },
+  { max: 15, phrase: "Not bad! Think you can outlast me? \uD83D\uDC40" },
+  { max: 30, phrase: "Decent run! Let's see if you've got the words for it \uD83D\uDCDA" },
+  { max: 50, phrase: "Solid score! Dare you to beat it \uD83D\uDD25" },
   { max: 999, phrase: "This is my magnum opus. Good luck \uD83D\uDE24" },
 ];
 
@@ -995,16 +998,16 @@ function buildShareText() {
   const gridWords = correctWords.slice(-5);
   const grid = gridWords.map(w => {
     const len = Math.min(w.w.length, 7);
-    return Array.from({length: len}, (_,i) => i%2===0 ? '\uD83D\uDFE8' : '\u2B1B').join('');
+    return Array.from({ length: len }, (_, i) => i % 2 === 0 ? '\uD83D\uDFE8' : '\u2B1B').join('');
   }).join('\n');
   const phrase = (ENGAGEMENT_PHRASES.find(p => score <= p.max) || ENGAGEMENT_PHRASES.at(-1)).phrase;
   const header = isDaily ? 'LetterBlitz \uD83D\uDDD3 Day #' + getDayNumber() : 'LetterBlitz \uD83D\uDCA5';
-  return [header,'','\uD83C\uDFAF Score: '+score,'\uD83D\uDD25 Best streak: '+bestStreak,'\uD83D\uDCD6 Words: '+correctWords.length,'',grid,'',phrase].join('\n');
+  return [header, '', '\uD83C\uDFAF Score: ' + score, '\uD83D\uDD25 Best streak: ' + bestStreak, '\uD83D\uDCD6 Words: ' + correctWords.length, '', grid, '', phrase].join('\n');
 }
 
 function shareScore() {
   const text = buildShareText();
-  const btn  = document.getElementById('btn-share');
+  const btn = document.getElementById('btn-share');
   function onSuccess(label) {
     btn.textContent = label; btn.classList.add('shared');
     setTimeout(() => { btn.textContent = '\uD83D\uDCE4 SHARE'; btn.classList.remove('shared'); }, 2500);
@@ -1016,12 +1019,12 @@ function shareScore() {
       const ta = document.createElement('textarea');
       ta.value = text; ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
       document.body.appendChild(ta); ta.focus(); ta.select();
-      try { document.execCommand('copy'); onSuccess('\u2705 COPIED!'); } catch(e) { onSuccess('\u2705 COPIED!'); }
+      try { document.execCommand('copy'); onSuccess('\u2705 COPIED!'); } catch (e) { onSuccess('\u2705 COPIED!'); }
       ta.remove();
     }
   }
   if (navigator.share && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
-    navigator.share({text}).then(() => onSuccess('\u2705 SHARED!')).catch(() => tryClipboard());
+    navigator.share({ text }).then(() => onSuccess('\u2705 SHARED!')).catch(() => tryClipboard());
   } else {
     tryClipboard();
   }
@@ -1038,7 +1041,7 @@ function initDemo() {
   for (let i = 0; i < DEMO_WORD.length; i++) {
     const box = document.createElement('div');
     box.className = 'demo-letter-box'; box.id = 'dl-' + i;
-    box.textContent = (i+1).toString();
+    box.textContent = (i + 1).toString();
     letters.appendChild(box);
   }
   let lit = -1;
@@ -1085,34 +1088,34 @@ function generateIcon(s) {
   ctx.fillStyle = '#0a0a0f';
   const r = s * 0.22;
   ctx.beginPath();
-  ctx.moveTo(r,0); ctx.lineTo(s-r,0); ctx.quadraticCurveTo(s,0,s,r);
-  ctx.lineTo(s,s-r); ctx.quadraticCurveTo(s,s,s-r,s);
-  ctx.lineTo(r,s); ctx.quadraticCurveTo(0,s,0,s-r);
-  ctx.lineTo(0,r); ctx.quadraticCurveTo(0,0,r,0);
+  ctx.moveTo(r, 0); ctx.lineTo(s - r, 0); ctx.quadraticCurveTo(s, 0, s, r);
+  ctx.lineTo(s, s - r); ctx.quadraticCurveTo(s, s, s - r, s);
+  ctx.lineTo(r, s); ctx.quadraticCurveTo(0, s, 0, s - r);
+  ctx.lineTo(0, r); ctx.quadraticCurveTo(0, 0, r, 0);
   ctx.closePath(); ctx.fill();
 
-  const cx = s/2, cy = s/2;
-  ctx.font = `bold ${s*0.28}px 'Bebas Neue', sans-serif`;
+  const cx = s / 2, cy = s / 2;
+  ctx.font = `bold ${s * 0.28}px 'Bebas Neue', sans-serif`;
   ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   ctx.fillStyle = '#f0e040';
   ctx.shadowColor = '#f0e040'; ctx.shadowBlur = s * 0.06;
   ctx.fillText('LB', cx, cy);
 
-  const bx = s*0.08, by = s*0.72, bw = s*0.84, bh = s*0.16;
+  const bx = s * 0.08, by = s * 0.72, bw = s * 0.84, bh = s * 0.16;
   ctx.fillStyle = '#f0e040';
   ctx.shadowBlur = 0;
   // Manual rounded rect — roundRect not available on iOS < 16
-  const rx = bh/2;
+  const rx = bh / 2;
   ctx.beginPath();
-  ctx.moveTo(bx+rx, by);
-  ctx.lineTo(bx+bw-rx, by);
-  ctx.quadraticCurveTo(bx+bw, by, bx+bw, by+rx);
-  ctx.lineTo(bx+bw, by+bh-rx);
-  ctx.quadraticCurveTo(bx+bw, by+bh, bx+bw-rx, by+bh);
-  ctx.lineTo(bx+rx, by+bh);
-  ctx.quadraticCurveTo(bx, by+bh, bx, by+bh-rx);
-  ctx.lineTo(bx, by+rx);
-  ctx.quadraticCurveTo(bx, by, bx+rx, by);
+  ctx.moveTo(bx + rx, by);
+  ctx.lineTo(bx + bw - rx, by);
+  ctx.quadraticCurveTo(bx + bw, by, bx + bw, by + rx);
+  ctx.lineTo(bx + bw, by + bh - rx);
+  ctx.quadraticCurveTo(bx + bw, by + bh, bx + bw - rx, by + bh);
+  ctx.lineTo(bx + rx, by + bh);
+  ctx.quadraticCurveTo(bx, by + bh, bx, by + bh - rx);
+  ctx.lineTo(bx, by + rx);
+  ctx.quadraticCurveTo(bx, by, bx + rx, by);
   ctx.closePath(); ctx.fill();
   return cv.toDataURL('image/png');
 }
@@ -1120,7 +1123,10 @@ function generateIcon(s) {
 function setupPWA() {
   // Service worker — reference real sw.js file
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js').catch(e => console.warn('SW:', e));
+    // SW registration — graceful fail on Live Server / non-HTTPS
+    navigator.serviceWorker.register('./sw.js', { scope: './' })
+      .then(reg => console.log('SW registered, scope:', reg.scope))
+      .catch(e => console.warn('SW not registered (normal on http):', e));
   }
 
   // Apple touch icon — generated dynamically
@@ -1133,7 +1139,7 @@ function setupPWA() {
   window.addEventListener('beforeinstallprompt', e => {
     e.preventDefault();
     window._installPrompt = e;
-    setTimeout(showInstallHint, 8000);
+    setTimeout(function showInstallHint() { /* install hint — no-op for now */ }, 8000);
   });
 }
 
@@ -1141,6 +1147,6 @@ function setupPWA() {
 // ── INIT ───────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   cacheDOM();
-  try { setupPWA(); } catch(e) { console.warn('PWA setup failed:', e); }
+  try { setupPWA(); } catch (e) { console.warn('PWA setup failed:', e); }
   initDemo();
 });

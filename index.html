@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -29,122 +30,120 @@
   <!-- Game styles -->
   <link rel="stylesheet" href="css/game.css">
 </head>
+
 <body>
 
-<div id="app">
+  <div id="app">
 
-  <!-- START -->
-  <div id="start-screen" class="screen active">
-    <div class="start-logo">LETTER<br>BLITZ</div>
-    <div class="start-tagline">Count the letters. Beat the clock. ⚡</div>
-    <div class="demo-wrap">
-      <div class="demo-instruction">How to play</div>
-      <div class="demo-word-row">
-        <div class="demo-word" id="demo-word">STORM</div>
-        <div class="demo-letters" id="demo-letters"></div>
-      </div>
-      <div class="demo-hint" id="demo-hint">&nbsp;</div>
-      <div class="demo-btns">
-        <button class="demo-btn" id="demo-btn-a" onclick="demoChoose(0)">7</button>
-        <button class="demo-btn" id="demo-btn-b" onclick="demoChoose(1)">5</button>
-      </div>
-      <div class="demo-caption" id="demo-caption">
-        Pick the button that matches the <em>number of letters</em> in the word.
-      </div>
-    </div>
-    <button class="play-btn" id="play-btn" onclick="startGame()">PLAY</button>
-    <button class="play-btn daily-play-btn" id="daily-btn" onclick="startDaily()">🗓 DAILY CHALLENGE</button>
-    <div class="daily-status" id="daily-status"></div>
-  </div>
-
-  <!-- GAME -->
-  <div id="game-screen" class="screen">
-    <div class="hud">
-      <div class="hud-item score-box">
-        <div class="hud-label">⭐ Score</div>
-        <div class="hud-val score-val" id="score-display">0</div>
-      </div>
-      <button class="mute-btn" id="mute-btn" onclick="toggleMute()" aria-label="Toggle sound">🔊</button>
-      <div class="hud-item streak-box">
-        <div class="hud-label">🔥 Streak</div>
-        <div class="hud-val streak-val" id="streak-display">0</div>
-      </div>
-    </div>
-    <div class="timer-bar"><div class="timer-fill" id="timer-fill"></div></div>
-    <div class="word-card" id="word-card">
-      <div class="multiplier-badge" id="multiplier-badge">×1</div>
-      <div class="word-label-row">
-        <div class="word-display" id="word-display">READY</div>
-      </div>
-      <canvas id="asteroid-canvas"></canvas>
-    </div>
-    <div class="ans-row">
-      <button class="ans-btn" id="btn-a" onclick="choose(0)">—</button>
-      <button class="ans-btn" id="btn-b" onclick="choose(1)">—</button>
-    </div>
-    <div class="loading-overlay" id="loading-overlay">
-      <div class="loading-text">Loading words…</div>
-    </div>
-  </div>
-
-  <!-- GAME OVER -->
-  <div id="gameover-screen" class="screen">
-    <div class="go-header">GAME<br>OVER 💀</div>
-    <div class="go-scores">
-      <div class="go-score-item">
-        <div class="go-label">Score</div>
-        <div class="go-val" id="go-score">0</div>
-      </div>
-      <div class="go-score-item">
-        <div class="go-label">🔥 Best streak</div>
-        <div class="go-val" id="go-best-streak">0</div>
-      </div>
-    </div>
-    <div class="go-new-best" id="go-new-best">
-      <span class="go-trophy">🏆</span>
-      <span>New best score!</span>
-      <span id="go-new-best-val">0</span>
-    </div>
-    <div id="reason-block" class="reason-block">
-      <div class="reason-label">❌ WRONG ANSWER</div>
-      <div class="reason-row">
-        <div class="reason-item">
-          <div class="reason-sub">WORD</div>
-          <div class="reason-val" id="go-word">—</div>
+    <!-- START -->
+    <div id="start-screen" class="screen active">
+      <div class="start-logo">LETTER<br>BLITZ</div>
+      <div class="start-tagline">Count the letters. Beat the clock. ⚡</div>
+      <div class="demo-wrap">
+        <div class="demo-instruction">How to play</div>
+        <div class="demo-word-row">
+          <div class="demo-word" id="demo-word">STORM</div>
+          <div class="demo-letters" id="demo-letters"></div>
         </div>
-        <div class="reason-item">
-          <div class="reason-sub">you picked</div>
-          <div class="reason-val wrong-val" id="reason-picked">—</div>
+        <div class="demo-hint" id="demo-hint">&nbsp;</div>
+        <div class="demo-btns">
+          <button class="demo-btn" id="demo-btn-a" onclick="demoChoose(0)">7</button>
+          <button class="demo-btn" id="demo-btn-b" onclick="demoChoose(1)">5</button>
         </div>
-        <div class="reason-arrow">→</div>
-        <div class="reason-item">
-          <div class="reason-sub">actually</div>
-          <div class="reason-val correct-val" id="reason-correct">—</div>
+        <div class="demo-caption" id="demo-caption">
+          Pick the button that matches the <em>number of letters</em> in the word.
+        </div>
+      </div>
+      <button class="btn-primary" id="play-btn" onclick="startGame()">PLAY</button>
+      <button class="btn-daily" id="daily-btn" onclick="startDaily()">🗓 DAILY CHALLENGE</button>
+      <div class="daily-status" id="daily-status"></div>
+    </div>
+
+    <!-- GAME -->
+    <div id="game-screen" class="screen">
+      <div class="game-wrap">
+        <div class="score-row">
+          <div>
+            <div class="score-label">⭐ Score</div>
+            <div class="score-val" id="score-display">0</div>
+          </div>
+          <button id="mute-btn" onclick="toggleMute()" aria-label="Toggle sound">🔊</button>
+          <div class="streak-box">
+            <div class="streak-label">🔥 Streak</div>
+            <div class="streak-val" id="streak-display">0</div>
+          </div>
+        </div>
+        <div class="timer-track">
+          <div class="timer-fill" id="timer-fill"></div>
+        </div>
+        <div class="word-card" id="word-card">
+          <div class="multiplier-badge" id="multiplier-badge">×1</div>
+          <div class="word-label-row">
+            <div class="current-word" id="current-word">READY</div>
+          </div>
+          <canvas id="asteroid-canvas"></canvas>
+        </div>
+        <div class="answers">
+          <button class="ans-btn" id="btn-a" onclick="choose(0)">—</button>
+          <button class="ans-btn" id="btn-b" onclick="choose(1)">—</button>
+        </div>
+        <div id="loading-overlay">
+          <div class="loading-spinner"></div>
+          <div class="loading-text">Loading words…</div>
         </div>
       </div>
     </div>
-    <div class="focus-card" id="focus-card">
-      <div class="focus-pron-row">
-        <div class="focus-pron" id="go-pron">/pronunciation/</div>
-        <button class="speak-btn" id="go-speak-btn" onclick="speakWord()">🔊</button>
-      </div>
-      <div class="focus-defn" id="go-defn">definition here</div>
-      <div class="focus-tags">
-        <span class="focus-tag correct-tag" id="go-correct">✅ CORRECT WORDS</span>
+
+    <!-- GAME OVER -->
+    <div id="gameover-screen" class="screen">
+      <div class="go-layout">
+        <div class="go-header">
+          <div class="go-title">GAME<br>OVER 💀</div>
+          <div class="go-score-box">
+            <div class="go-score-label">Score</div>
+            <div class="go-score-num" id="final-score">0</div>
+          </div>
+        </div>
+        <div class="highscore-banner" id="highscore-banner">
+          <div class="highscore-banner-icon">🏆</div>
+          <div class="highscore-banner-text">New best score!</div>
+          <div class="highscore-banner-val" id="highscore-val"></div>
+        </div>
+        <div class="go-score-box" style="text-align:center;">
+          <div class="go-score-label">🔥 Best Streak</div>
+          <div class="go-score-num" id="final-streak">0</div>
+        </div>
+        <div id="go-message" class="go-message"></div>
+        <div class="focus-card" id="focus-card">
+          <div class="focus-tag" id="focus-tag">❌ WRONG ANSWER</div>
+          <div class="focus-word" id="focus-word">—</div>
+          <div class="reason-letters" id="reason-letters"></div>
+          <div class="focus-reason" id="focus-reason" style="display:none;">
+            <span class="reason-picked" id="reason-picked">—</span>
+            <span class="reason-arrow">→</span>
+            <span class="reason-correct" id="reason-correct">—</span>
+          </div>
+          <div class="focus-pron-row">
+            <div class="focus-pron" id="focus-pron">/pronunciation/</div>
+            <button class="speak-btn" id="go-speak-btn" onclick="speakWord()">🔊</button>
+          </div>
+          <div class="focus-def" id="focus-def">definition here</div>
+        </div>
+        <div class="collection-label" id="coll-label">✅ CORRECT WORDS</div>
+        <div class="collection" id="collection"></div>
+        <div class="go-engagement" id="go-engagement"></div>
+        <div class="go-actions">
+          <button class="btn-share" id="btn-share" onclick="shareScore()">📤 SHARE</button>
+          <button class="btn-play-again" onclick="startGame()">↩ PLAY AGAIN</button>
+        </div>
       </div>
     </div>
-    <div class="go-collection" id="go-collection"></div>
-    <div id="go-message" class="go-message"></div>
-    <div class="go-actions">
-      <button class="go-btn share-btn" id="go-share-btn" onclick="shareScore()">📤 SHARE</button>
-      <button class="go-btn replay-btn" onclick="startGame()">↩ PLAY AGAIN</button>
-    </div>
-  </div>
 
-</div><!-- #app -->
+  </div><!-- #app -->
 
-<!-- Game script — deferred so HTML renders first -->
-<script src="js/game.js" defer></script>
+  <!-- Game script — deferred so HTML renders first -->
+  <script src="js/game.js?v=4" defer></script>
 
 </body>
+
 </html>

@@ -8,6 +8,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="LetterBlitz">
+  <meta name="google-adsense-account" content="ca-pub-8113421009895826">
 
   <!-- SEO / Open Graph -->
   <title>LetterBlitz — Count the Letters. Beat the Clock.</title>
@@ -29,6 +30,10 @@
 
   <!-- Game styles -->
   <link rel="stylesheet" href="css/game.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8113421009895826"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -133,16 +138,23 @@
         <div class="collection" id="collection"></div>
         <div class="go-engagement" id="go-engagement"></div>
         <div class="go-actions">
+          <button class="btn-continue" id="btn-continue" onclick="continueGame()" style="display:none">🎬 CONTINUE
+            (+3s)</button>
           <button class="btn-share" id="btn-share" onclick="shareScore()">📤 SHARE</button>
           <button class="btn-play-again" onclick="startGame()">↩ PLAY AGAIN</button>
+        </div>
+        <div class="ad-banner" id="ad-banner" style="display:none">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8113421009895826"
+            data-ad-format="horizontal" data-full-width-responsive="false"></ins>
         </div>
       </div>
     </div>
 
   </div><!-- #app -->
 
-  <!-- Game script — deferred so HTML renders first -->
-  <script src="js/game.js?v=4" defer></script>
+  <!-- Ad manager + Game script — deferred so HTML renders first -->
+  <script src="js/ads.js?v=1" defer></script>
+  <script src="js/game.js?v=5" defer></script>
 
 </body>
 

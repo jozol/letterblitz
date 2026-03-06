@@ -1,10 +1,11 @@
-const CACHE = 'letterblitz-v4';
+const CACHE = 'letterblitz-v5';
 // Use relative paths — works on any host (localhost, GitHub Pages, etc.)
 const ASSETS = [
   './',
   './index.html',
   './css/game.css',
   './js/game.js',
+  './js/ads.js',
   './assets/bgm.mp3',
   './manifest.json'
 ];
@@ -29,7 +30,7 @@ self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
 
   // Word API — network only, no cache
-  if (url.hostname.includes('vercel.app') || url.hostname.includes('datamuse') || url.hostname.includes('herokuapp.com') || url.hostname.includes('dictionaryapi.dev')) {
+  if (url.hostname.includes('vercel.app') || url.hostname.includes('datamuse') || url.hostname.includes('herokuapp.com') || url.hostname.includes('dictionaryapi.dev') || url.hostname.includes('googlesyndication') || url.hostname.includes('doubleclick')) {
     e.respondWith(fetch(e.request).catch(() => new Response('[]')));
     return;
   }

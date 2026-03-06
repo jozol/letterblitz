@@ -209,6 +209,8 @@ let activeWords = [...WORDS];
 let milestoneActive = false, pendingMilestone = null;
 let speakTarget = '';
 let isDailyMode = false, dailyWordList = [], dailyRng = null;
+let replayCount = 0;
+let continueUsed = false;
 
 // ── DAILY CHALLENGE ────────────────────────────────────────────
 function getDayNumber() {
@@ -348,6 +350,18 @@ function showScreen(id) {
 }
 
 function startGame() {
+  replayCount++;
+  // Show interstitial every 3rd replay (never before first game)
+  if (replayCount > 1 && replayCount % 3 === 0) {
+    Ads.showInterstitial().then(() => _startGame());
+    return;
+  }
+  _startGame();
+}
+
+function _startGame() {
+  Ads.hideBanner();
+  continueUsed = false;
   if (!isDailyMode) isDailyMode = false;
   startBgMusic();
   score = 0; streak = 0; bestStreak = 0;
@@ -371,7 +385,6 @@ function startGame() {
 
   const overlay = DOM['loading-overlay'];
   if (isDailyMode) {
-    // Daily uses local word bank — no loading needed
     overlay.classList.remove('visible');
     gameRunning = true;
     requestAnimationFrame(() => { initAsteroidCanvas(); nextWord(); });
@@ -900,6 +913,14 @@ function triggerGameOver(timeout) {
 
       showFocusCard(wrongWord, false, pickedWrongNum);
       buildCollection();
+
+      // ── Ads ──
+      Ads.showBanner();
+      const continueBtn = document.getElementById('btn-continue');
+      if (continueBtn) {
+        continueBtn.style.display = (!continueUsed && score > 0) ? 'block' : 'none';
+      }
+
       showScreen('gameover-screen');
     } catch (err) {
       console.error('Game over screen error:', err.message, err.stack);
@@ -1144,9 +1165,31 @@ function setupPWA() {
 }
 
 
+// ── CONTINUE (REWARDED AD) ────────────────────────────────────
+function continueGame() {
+  document.getElementById('btn-continue').style.display = 'none';
+  Ads.showRewarded().then(() => {
+    continueUsed = true;
+    Ads.hideBanner();
+    gameRunning = true;
+    timerDuration = getPhase(roundNum).timerMs;
+    showScreen('game-screen');
+    requestAnimationFrame(() => { initAsteroidCanvas(); nextWord(); });
+  }).catch(() => {
+    // Ad failed/blocked — give free continue (good UX)
+    continueUsed = true;
+    Ads.hideBanner();
+    gameRunning = true;
+    timerDuration = getPhase(roundNum).timerMs;
+    showScreen('game-screen');
+    requestAnimationFrame(() => { initAsteroidCanvas(); nextWord(); });
+  });
+}
+
 // ── INIT ───────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   cacheDOM();
+  try { Ads.init(); } catch (e) { console.warn('Ads init failed:', e); }
   try { setupPWA(); } catch (e) { console.warn('PWA setup failed:', e); }
   initDemo();
 });
